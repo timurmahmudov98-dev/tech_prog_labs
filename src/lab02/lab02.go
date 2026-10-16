@@ -15,10 +15,10 @@ type Animal struct {
 
 }
 
-
 func (a *Animal) getName() string {
 	return a.name
 }
+
 
 func (a *Animal) getAge() int {
 	return a.age
