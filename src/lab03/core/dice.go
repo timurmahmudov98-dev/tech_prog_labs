@@ -5,8 +5,7 @@ import (
 	"sync"
 )
 
-// dice - одиночка: общий источник случайности на всю игру.
-// Тип неэкспортируемый (с маленькой буквы), поэтому вне пакета core создать кость нельзя.
+
 type dice struct {
 	random *rand.Rand
 }
@@ -17,9 +16,9 @@ var (
 	once     sync.Once
 )
 
-// GetInstance возвращает единственный экземпляр кости
+
 func GetInstance() *dice {
-	// sync.Once выполнит функцию ровно один раз, даже если GetInstance одновременно вызовут несколько горутин
+
 	once.Do(func() {
 		instance = &dice{random: rand.New(rand.NewPCG(rand.Uint64(), rand.Uint64()))}
 	})

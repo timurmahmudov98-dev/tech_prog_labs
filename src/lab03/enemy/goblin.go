@@ -1,6 +1,6 @@
 package enemy
 
-// Goblin - самый простой враг, без особенностей
+
 type Goblin struct {
 	baseEnemy
 }

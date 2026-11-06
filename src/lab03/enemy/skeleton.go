@@ -1,6 +1,6 @@
 package enemy
 
-// Skeleton - кости плохо поддаются ударам, поэтому часть урона проходит мимо
+
 type Skeleton struct {
 	baseEnemy
 }

@@ -6,8 +6,7 @@ import (
 	"lab03/kit"
 )
 
-// HeroClass - класс героя. Поля неэкспортируемые, поэтому классы героя - это только значения,
-// заранее созданные в этом пакете (Warrior, Ranger, Mage)
+
 type HeroClass struct {
 	code        string
 	displayName string
@@ -22,7 +21,7 @@ var (
 	Mage    = &HeroClass{"mage", "Маг", 85, kit.NewMageKitFactory}
 )
 
-// HeroClasses возвращает все классы героя по порядку
+
 func HeroClasses() []*HeroClass {
 	return []*HeroClass{Warrior, Ranger, Mage}
 }
@@ -37,7 +36,7 @@ func HeroClassByCode(code string) (*HeroClass, error) {
 	return nil, &core.UnknownCodeError{What: "Класс героя", Code: code}
 }
 
-// StarterKit - каждый класс сам знает свою фабрику стартового снаряжения
+
 func (c *HeroClass) StarterKit(catalog *item.ItemCatalog) kit.StarterKitFactory {
 	return c.starterKit(catalog)
 }
