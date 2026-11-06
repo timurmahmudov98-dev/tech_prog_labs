@@ -298,7 +298,7 @@ Item (interface)
 | `PossibleEnchantments()` | Для оружия подходят `ForWeapons` (Острое, Огненное). | → `ForWeapons` |
 | `Enchant(e)` | Накладывает зачарование из списка для оружия. | → `baseItem.enchant`, `ForWeapons` |
 
-#### 📄 `item/sword.go` — тип `Sword` ⊂ `baseWeapon`
+####  `item/sword.go` — тип `Sword` ⊂ `baseWeapon`
 Меч бьёт стабильно.
 
 | Метод | Что делает | Зависит от |
